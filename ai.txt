@@ -1,0 +1,42 @@
+providers:
+    - groq
+    - openrouter
+    - cloudflare_workers_ai
+
+models:
+    groq:
+        openai/gpt-oss-120b
+        qwen/qwen3.8-27b	
+        openai/gpt-oss-20b
+
+    openrouter: 
+        nvidia/nemotron-3-ultra-550b-a55b:free
+        minimax/minimax-m3.1-flash:free
+
+    cloudflare_workers_ai:
+        @cf/qwen/qwen3.8-27b
+
+roles:
+    software_engineer:
+        - qwen/qwen3.8-27b
+        - openai/gpt-oss-120b
+
+    product_manager:
+        - openai/gpt-oss-120b
+        - nvidia/nemotron-3-ultra-550b-a55b:free
+
+    software_architect:
+        - openai/gpt-oss-120b
+        - qwen/qwen3.8-27b
+
+    qa_engineer:
+        - qwen/qwen3.8-27b
+        - openai/gpt-oss-20b
+
+    devops_engineer:
+        - openai/gpt-oss-120b
+        - qwen/qwen3.8-27b
+
+software_architect: Phân tích yêu cầu, thiết kế kiến trúc, chia nhỏ công việc và xác định tiêu chuẩn kỹ thuật.
+software_engineer: Nhận thiết kế, viết code và triển khai các chức năng theo yêu cầu.
+qa_engineer: Kiểm thử chức năng, tìm lỗi và đối chiếu kết quả với yêu cầu ban đầu.

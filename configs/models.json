@@ -1,0 +1,15 @@
+{
+    "groq": {
+        "models": [
+            "openai/gpt-oss-120b",
+            "qwen/qwen3.8-27b",
+            "openai/gpt-oss-20b"
+        ]
+    },
+    "openrouter": {
+        "models": [
+            "nvidia/nemotron-3-ultra-550b-a55b:free",
+            "minimax/minimax-m3.1-flash:free"
+        ]
+    }
+}

@@ -7,6 +7,9 @@
 #include "providers/Initializer.h"
 
 #include "HR/Hr.h"
+#include "HR/SoftwareArchitect.h"
+#include "HR/SoftwareEngineer.h"
+#include "HR/QaEngineer.h"
 
 #include "prompt/Prompt.h"
 
@@ -79,7 +82,19 @@ int main()
         }
 
         prompt -> _get_user_input(input);
-        nlohmann::json architect = prompt -> _return_prompt("software architect");
+
+        nlohmann::json agent_prompt = prompt -> _return_prompt("software architect");
+        std::string architect_response = software_architect -> _run(agent_prompt , input);
+
+        agent_prompt = prompt -> _return_prompt("software engineer");
+        std::string engineer_response = software_engineer -> _run(agent_prompt , architect_response);
+
+        agent_prompt = prompt -> _return_prompt("qa engineer");
+        std::string qa_response = qa_engineer -> _run(agent_prompt , engineer_response);
+
+        std::cout << qa_response << "\n";
+
+        std::cout << "\n";
     }
 
     std::string one;

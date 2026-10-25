@@ -76,5 +76,11 @@
   "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/.env\\\" -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/include -ID:/work/programs/prj/ai-office -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\utils\\Json.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\src\\utils\\Json.cpp",
   "file": "D:/work/programs/prj/ai-office/src/utils/Json.cpp",
   "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/.env\\\" -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/include -ID:/work/programs/prj/ai-office -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\utils\\Str.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\src\\utils\\Str.cpp",
+  "file": "D:/work/programs/prj/ai-office/src/utils/Str.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj"
 }
 ]

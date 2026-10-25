@@ -1,0 +1,115 @@
+.input_container
+{
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+
+    width: 100%;
+    padding: 16px;
+
+    background: #111111;
+
+    border: 1px solid #303030;
+    border-radius: 16px;
+
+    transition: border-color 0.2s ease;
+}
+
+.input_container:focus-within
+{
+    border-color: #666666;
+}
+
+.user_input
+{
+    flex: 1;
+
+    min-width: 0;
+    min-height: 24px;
+    max-height: 200px;
+    padding: 4px 0;
+
+    resize: none;
+    overflow-y: auto;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #F5F5F5;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.user_input::placeholder
+{
+    color: #737373;
+}
+
+.user_input::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+.user_input::-webkit-scrollbar-thumb
+{
+    background: #404040;
+    border-radius: 10px;
+}
+
+.send_button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+
+    background: #F5F5F5;
+    border: none;
+    border-radius: 10px;
+
+    color: #111111;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.send_button:hover
+{
+    background: #D4D4D4;
+}
+
+.send_button:active
+{
+    transform: scale(0.95);
+}
+
+.send_button:disabled
+{
+    background: #333333;
+    color: #737373;
+
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px)
+{
+    .input_container
+    {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .user_input
+    {
+        font-size: 14px;
+    }
+}

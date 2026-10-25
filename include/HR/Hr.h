@@ -8,6 +8,7 @@
 #include <vector>
 #include <memory>
 #include <string>
+#include <nlohmann/json.hpp>
 
 namespace hr
 {
@@ -25,32 +26,15 @@ namespace hr
             std::string name ,
             std::vector<std::unique_ptr<providers::Provider>> &agents
         );
-    };
 
-    class SoftwareEngineer : public Divisions
-    {
-    public:
-        SoftwareEngineer(
-            std::string name ,
-            std::vector<std::unique_ptr<providers::Provider>> &agents
+        virtual std::string _run(
+            nlohmann::json prompt ,
+            std::string input
         );
-    };
 
-    class SoftwareArchitect : public Divisions
-    {
-    public:
-        SoftwareArchitect(
-            std::string name ,
-            std::vector<std::unique_ptr<providers::Provider>> &agents
-        );
-    };
-
-    class QaEngineer : public Divisions
-    {
-    public: 
-        QaEngineer(
-            std::string name ,
-            std::vector<std::unique_ptr<providers::Provider>> &agents
+        virtual std::string _backup(
+            nlohmann::json prompt ,
+            std::string input
         );
     };
 }

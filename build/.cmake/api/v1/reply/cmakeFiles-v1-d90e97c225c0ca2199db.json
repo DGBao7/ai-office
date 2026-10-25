@@ -15,7 +15,8 @@
 				"D:/work/programs/prj/ai-office/src/providers/OpenRouterProvider.cpp",
 				"D:/work/programs/prj/ai-office/src/providers/Provider.cpp",
 				"D:/work/programs/prj/ai-office/src/utils/Env.cpp",
-				"D:/work/programs/prj/ai-office/src/utils/Json.cpp"
+				"D:/work/programs/prj/ai-office/src/utils/Json.cpp",
+				"D:/work/programs/prj/ai-office/src/utils/Str.cpp"
 			],
 			"recurse" : true
 		}

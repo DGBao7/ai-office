@@ -239,4 +239,5 @@ AIOffice_autogen/timestamp: \
 	D:/work/programs/prj/ai-office/src/providers/Provider.cpp \
 	D:/work/programs/prj/ai-office/src/utils/Env.cpp \
 	D:/work/programs/prj/ai-office/src/utils/Json.cpp \
+	D:/work/programs/prj/ai-office/src/utils/Str.cpp \
 	D:/work/msys2/mingw64/bin/cmake.exe

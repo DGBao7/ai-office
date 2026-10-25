@@ -154,85 +154,85 @@ namespace prompt
                 "Use insufficient_information when there is not enough evidence "
                 "to determine readiness.";
 
-            output_schema = {
-                {"type", "object"},
-                {"additionalProperties", false},
-                {"properties", {
-                    {"verdict", {
-                        {"type", "string"},
-                        {"enum", {
-                            "ready",
-                            "needs_changes",
-                            "insufficient_information"
-                        }}
-                    }},
-                    {"summary", {
-                        {"type", "string"}
-                    }},
-                    {"findings", {
-                        {"type", "array"},
-                        {"items", {
-                            {"type", "object"},
-                            {"additionalProperties", false},
-                            {"properties", {
-                                {"severity", {
-                                    {"type", "string"},
-                                    {"enum", {
-                                        "critical",
-                                        "high",
-                                        "medium",
-                                        "low"
-                                    }}
-                                }},
-                                {"location", {{"type", "string"}}},
-                                {"issue", {{"type", "string"}}},
-                                {"recommendation", {{"type", "string"}}}
-                            }},
-                            {"required", {
-                                "severity",
-                                "location",
-                                "issue",
-                                "recommendation"
-                            }}
-                        }}
-                    }},
-                    {"test_cases", {
-                        {"type", "array"},
-                        {"items", {
-                            {"type", "object"},
-                            {"additionalProperties", false},
-                            {"properties", {
-                                {"name", {{"type", "string"}}},
-                                {"steps", {
-                                    {"type", "array"},
-                                    {"items", {{"type", "string"}}}
-                                }},
-                                {"expected_result", {{"type", "string"}}},
-                                {"execution_status", {
-                                    {"type", "string"},
-                                    {"enum", {
-                                        "not_run",
-                                        "passed",
-                                        "failed"
-                                    }}
-                                }}
-                            }},
-                            {"required", {
-                                "name",
-                                "steps",
-                                "expected_result",
-                                "execution_status"
-                            }}
-                        }}
-                    }}
-                }},
-                {"required", {
-                    "verdict",
-                    "summary",
-                    "findings",
-                    "test_cases"
-                }}
-            };
+            // output_schema = {
+            //     {"type", "object"},
+            //     {"additionalProperties", false},
+            //     {"properties", {
+            //         {"verdict", {
+            //             {"type", "string"},
+            //             {"enum", {
+            //                 "ready",
+            //                 "needs_changes",
+            //                 "insufficient_information"
+            //             }}
+            //         }},
+            //         {"summary", {
+            //             {"type", "string"}
+            //         }},
+            //         {"findings", {
+            //             {"type", "array"},
+            //             {"items", {
+            //                 {"type", "object"},
+            //                 {"additionalProperties", false},
+            //                 {"properties", {
+            //                     {"severity", {
+            //                         {"type", "string"},
+            //                         {"enum", {
+            //                             "critical",
+            //                             "high",
+            //                             "medium",
+            //                             "low"
+            //                         }}
+            //                     }},
+            //                     {"location", {{"type", "string"}}},
+            //                     {"issue", {{"type", "string"}}},
+            //                     {"recommendation", {{"type", "string"}}}
+            //                 }},
+            //                 {"required", {
+            //                     "severity",
+            //                     "location",
+            //                     "issue",
+            //                     "recommendation"
+            //                 }}
+            //             }}
+            //         }},
+            //         {"test_cases", {
+            //             {"type", "array"},
+            //             {"items", {
+            //                 {"type", "object"},
+            //                 {"additionalProperties", false},
+            //                 {"properties", {
+            //                     {"name", {{"type", "string"}}},
+            //                     {"steps", {
+            //                         {"type", "array"},
+            //                         {"items", {{"type", "string"}}}
+            //                     }},
+            //                     {"expected_result", {{"type", "string"}}},
+            //                     {"execution_status", {
+            //                         {"type", "string"},
+            //                         {"enum", {
+            //                             "not_run",
+            //                             "passed",
+            //                             "failed"
+            //                         }}
+            //                     }}
+            //                 }},
+            //                 {"required", {
+            //                     "name",
+            //                     "steps",
+            //                     "expected_result",
+            //                     "execution_status"
+            //                 }}
+            //             }}
+            //         }}
+            //     }},
+            //     {"required", {
+            //         "verdict",
+            //         "summary",
+            //         "findings",
+            //         "test_cases"
+            //     }}
+            // };
         }
         else
         {
@@ -243,6 +243,24 @@ namespace prompt
                     "software_engineer",
                     "qa_engineer"
                 }}
+            };
+        }
+
+        if (role == "qa engineer")
+        {
+            instructions =
+                "You are a Software Engineer and coding assistant. "
+                "Implement the user's request directly. "
+                "When asked to write code, provide complete, working code "
+                "in the requested programming language. "
+                "Do not review code unless explicitly requested. "
+                "Respond in plain text using Markdown when appropriate. "
+                "Do not return JSON.";
+
+            return {
+                {"role", "coder"},
+                {"instructions", instructions},
+                {"user_request", this -> input}
             };
         }
 

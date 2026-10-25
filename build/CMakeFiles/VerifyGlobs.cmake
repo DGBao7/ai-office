@@ -15,6 +15,7 @@ set(OLD_GLOB
   "D:/work/programs/prj/ai-office/src/providers/Provider.cpp"
   "D:/work/programs/prj/ai-office/src/utils/Env.cpp"
   "D:/work/programs/prj/ai-office/src/utils/Json.cpp"
+  "D:/work/programs/prj/ai-office/src/utils/Str.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

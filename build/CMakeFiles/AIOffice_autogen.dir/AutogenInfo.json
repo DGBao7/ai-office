@@ -436,7 +436,8 @@
 			null
 		],
 		[ "D:/work/programs/prj/ai-office/src/utils/Env.cpp", "Mu", null ],
-		[ "D:/work/programs/prj/ai-office/src/utils/Json.cpp", "Mu", null ]
+		[ "D:/work/programs/prj/ai-office/src/utils/Json.cpp", "Mu", null ],
+		[ "D:/work/programs/prj/ai-office/src/utils/Str.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0

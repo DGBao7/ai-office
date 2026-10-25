@@ -179,6 +179,16 @@ build CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj: CXX_COMPILER__AIOffice_uns
   OBJECT_FILE_DIR = CMakeFiles\AIOffice.dir\src\utils
   TARGET_SUPPORT_DIR = CMakeFiles\AIOffice.dir
 
+build CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj: CXX_COMPILER__AIOffice_unscanned_Debug D$:/work/programs/prj/ai-office/src/utils/Str.cpp || cmake_object_order_depends_target_AIOffice
+  CONFIG = Debug
+  DEFINES = -DENV_FILE_PATH=\"D:/work/programs/prj/ai-office/.env\" -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\AIOffice.dir\src\utils\Str.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/include -ID:/work/programs/prj/ai-office -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui
+  OBJECT_DIR = CMakeFiles\AIOffice.dir
+  OBJECT_FILE_DIR = CMakeFiles\AIOffice.dir\src\utils
+  TARGET_SUPPORT_DIR = CMakeFiles\AIOffice.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AIOffice
@@ -187,7 +197,7 @@ build CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj: CXX_COMPILER__AIOffice_uns
 #############################################
 # Link the executable AIOffice.exe
 
-build AIOffice.exe: CXX_EXECUTABLE_LINKER__AIOffice_Debug CMakeFiles/AIOffice.dir/AIOffice_autogen/mocs_compilation.cpp.obj CMakeFiles/AIOffice.dir/main.cpp.obj CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj | D$:/work/msys2/mingw64/lib/libcurl.dll.a D$:/work/msys2/mingw64/lib/libQt6Widgets.dll.a D$:/work/msys2/mingw64/lib/libQt6Gui.dll.a D$:/work/msys2/mingw64/lib/libQt6Core.dll.a || AIOffice_autogen AIOffice_autogen_timestamp_deps
+build AIOffice.exe: CXX_EXECUTABLE_LINKER__AIOffice_Debug CMakeFiles/AIOffice.dir/AIOffice_autogen/mocs_compilation.cpp.obj CMakeFiles/AIOffice.dir/main.cpp.obj CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj | D$:/work/msys2/mingw64/lib/libcurl.dll.a D$:/work/msys2/mingw64/lib/libQt6Widgets.dll.a D$:/work/msys2/mingw64/lib/libQt6Gui.dll.a D$:/work/msys2/mingw64/lib/libQt6Core.dll.a || AIOffice_autogen AIOffice_autogen_timestamp_deps
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = D:/work/msys2/mingw64/lib/libcurl.dll.a  D:/work/msys2/mingw64/lib/libQt6Widgets.dll.a  D:/work/msys2/mingw64/lib/libQt6Gui.dll.a  D:/work/msys2/mingw64/lib/libQt6Core.dll.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

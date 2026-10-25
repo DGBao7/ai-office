@@ -1,0 +1,58 @@
+html,
+body,
+#root
+{
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #0A0A0A;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.playground
+{
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(255 , 255 , 255 , 0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255 , 255 , 255 , 0.025) 1px,
+            transparent 1px
+        ),
+
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255 , 255 , 255 , 0.06),
+            transparent 45%
+        ),
+
+        #0A0A0A;
+
+    background-size:
+        40px 40px,
+        40px 40px,
+        100% 100%;
+
+    color: #F5F5F5;
+    font-family: Inter , Arial , sans-serif;
+}
+
+.workspace
+{
+    display: grid;
+    grid-template-columns: 600px 1fr;
+
+    min-height: calc(100vh - 64px);
+
+    background: transparent;
+}

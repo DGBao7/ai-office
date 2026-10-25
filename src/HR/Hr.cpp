@@ -10,23 +10,19 @@ namespace hr
         agents(agents)
     {}
 
-    SoftwareEngineer::SoftwareEngineer(
-        std::string name ,
-        std::vector<std::unique_ptr<providers::Provider>> &agents
+    std::string Divisions::_run( 
+        nlohmann::json prompt ,
+        std::string input
     )
-        : Divisions(name , agents)
     {
-        this -> manager = this -> agents[1].get();
-        this -> manager = this -> agents[0].get();
+        return "";
     }
 
-    QaEngineer::QaEngineer(
-        std::string name ,
-        std::vector<std::unique_ptr<providers::Provider>> &agents
+    std::string Divisions::_backup(
+        nlohmann::json prompt ,
+        std::string input
     )
-        : Divisions(name , agents)
     {
-        this -> manager = this -> agents[1].get();
-        this -> employee = this -> agents[2].get();
+        return "";
     }
 }

@@ -5,9 +5,15 @@
 
 #include "HR/Hr.h"
 
+#include "utils/Str.h"
+
 #include <string>
 #include <memory>
 #include <vector>
+#include <nlohmann/json.hpp>
+#include <exception>
+#include <stdexcept>
+#include <iostream>
 
 namespace hr
 {
@@ -18,24 +24,16 @@ namespace hr
             std::string name ,
             std::vector<std::unique_ptr<providers::Provider>> &agents
         );
-    };
 
-    class SoftwareArchitect : public Divisions
-    {
-    public:
-        SoftwareArchitect(
-            std::string name ,
-            std::vector<std::unique_ptr<providers::Provider>> &agents
-        );
-    };
+        std::string _run(
+            nlohmann::json prompt ,
+            std::string input
+        ) override;
 
-    class QaEngineer : public Divisions
-    {
-    public: 
-        QaEngineer(
-            std::string name ,
-            std::vector<std::unique_ptr<providers::Provider>> &agents
-        );
+        std::string _backup(
+            nlohmann::json prompt ,
+            std::string input
+        ) override;
     };
 }
 

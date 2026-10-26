@@ -1,0 +1,5 @@
+D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir
+D:/work/programs/prj/ai-office/build/CMakeFiles/edit_cache.dir
+D:/work/programs/prj/ai-office/build/CMakeFiles/rebuild_cache.dir
+D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice_autogen_timestamp_deps.dir
+D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice_autogen.dir

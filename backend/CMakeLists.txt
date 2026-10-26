@@ -11,6 +11,7 @@ set(CMAKE_AUTOMOC ON)
 find_package(CURL REQUIRED)
 find_package(nlohmann_json REQUIRED)
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Threads REQUIRED)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
@@ -19,6 +20,10 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
 add_executable(AIOffice
     main.cpp
     ${SOURCES}
+)
+
+target_compile_definitions(AIOffice PRIVATE
+    "MODELS_FILE_PATH=\"${CMAKE_CURRENT_SOURCE_DIR}/configs/models.json\""
 )
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.env")
@@ -45,3 +50,13 @@ target_link_libraries(AIOffice PRIVATE
     nlohmann_json::nlohmann_json
     Qt6::Widgets
 )
+
+target_link_libraries(AIOffice PRIVATE
+    Threads::Threads
+)
+
+if(WIN32)
+    target_link_libraries(AIOffice PRIVATE
+        ws2_32
+    )
+endif()

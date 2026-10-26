@@ -21,7 +21,7 @@ function InputContainer(
         textarea.style.height = `${Math.min(textarea.scrollHeight, 200)}px`;
     }
 
-    function _handle_submit(event)
+    async function _handle_submit(event)
     {
         event.preventDefault();
 
@@ -34,10 +34,10 @@ function InputContainer(
 
         _set_chat(
             current_chat => [
-                ...current_chat ,
+                ...current_chat,
                 {
-                    id: Date.now() ,
-                    role: "user" ,
+                    id: `user-${Date.now()}`,
+                    role: "user",
                     content: content
                 }
             ]
@@ -48,6 +48,57 @@ function InputContainer(
         if (textarea_ref.current)
         {
             textarea_ref.current.style.height = "24px";
+        }
+
+        try
+        {
+            const response = await fetch(
+                "http://127.0.0.1:8080/api/chat",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        message: content
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok)
+            {
+                throw new Error(data.error || "Request failed");
+            }
+
+            _set_chat(
+                current_chat => [
+                    ...current_chat,
+                    {
+                        id: `ai-${Date.now()}`,
+                        role: "ai",
+                        content: data.reply
+                    }
+                ]
+            );
+        }
+        catch (error)
+        {
+            console.error("Chat request failed:", error);
+
+            _set_chat(
+                current_chat => [
+                    ...current_chat,
+                    {
+                        id: `error-${Date.now()}`,
+                        role: "ai",
+                        content: "Không thể kết nối với backend."
+                    }
+                ]
+            );
         }
     }
 

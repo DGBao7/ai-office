@@ -1,0 +1,92 @@
+[
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\AIOffice_autogen\\mocs_compilation.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\build\\AIOffice_autogen\\mocs_compilation.cpp",
+  "file": "D:/work/programs/prj/ai-office/build/AIOffice_autogen/mocs_compilation.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/AIOffice_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\main.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\main.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/main.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/main.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\HR\\Hr.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\HR\\Hr.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/HR/Hr.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\HR\\QaEngineer.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\HR\\QaEngineer.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/HR/QaEngineer.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\HR\\SoftwareArchitect.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\HR\\SoftwareArchitect.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/HR/SoftwareArchitect.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\HR\\SoftwareEngineer.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\HR\\SoftwareEngineer.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/HR/SoftwareEngineer.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\prompt\\Prompt.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\prompt\\Prompt.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/prompt/Prompt.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\providers\\GroqProvider.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\providers\\GroqProvider.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/providers/GroqProvider.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\providers\\Initializer.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\providers\\Initializer.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/providers/Initializer.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\providers\\OpenRouterProvider.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\providers\\OpenRouterProvider.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/providers/OpenRouterProvider.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\providers\\Provider.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\providers\\Provider.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/providers/Provider.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\server\\HttpServer.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\server\\HttpServer.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/server/HttpServer.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/server/HttpServer.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\utils\\Env.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\utils\\Env.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/utils/Env.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\utils\\Json.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\utils\\Json.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/utils/Json.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\g++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -g -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\utils\\Str.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\utils\\Str.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/utils/Str.cpp",
+  "output": "D:/work/programs/prj/ai-office/build/CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj"
+}
+]

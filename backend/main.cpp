@@ -13,6 +13,8 @@
 
 #include "prompt/Prompt.h"
 
+#include "server/HttpServer.h"
+
 #include <string>
 #include <iostream>
 #include <windows.h>
@@ -69,6 +71,8 @@ int main()
     );
 
     prompt::Prompt *prompt = new prompt::Prompt();
+
+    server::_start();
 
     while (true)
     {

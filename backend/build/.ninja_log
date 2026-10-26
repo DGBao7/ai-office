@@ -1,0 +1,21 @@
+# ninja log v7
+22	74	8147147023633849	D:/work/programs/prj/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b87c29baaf8603d7
+76	375	8147147026408365	AIOffice_autogen/timestamp	e9ff468f6abf537f
+76	375	8147147026408365	AIOffice_autogen/mocs_compilation.cpp	e9ff468f6abf537f
+76	375	8147147026408365	D:/work/programs/prj/ai-office/backend/build/AIOffice_autogen/timestamp	e9ff468f6abf537f
+76	375	8147147026408365	D:/work/programs/prj/ai-office/backend/build/AIOffice_autogen/mocs_compilation.cpp	e9ff468f6abf537f
+378	602	8147147027196851	CMakeFiles/AIOffice.dir/AIOffice_autogen/mocs_compilation.cpp.obj	946347821b6e4029
+513	1551	8147147028577026	CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj	4ab3c18a2eaa3103
+490	2146	8147147028325271	CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj	b8e4f94f814bddb5
+477	3508	8147147028219121	CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj	e695ea14436f0f4c
+501	5176	8147147028432039	CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj	d7c9082d61d8bc2c
+432	5481	8147147027707316	CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj	615d4647c9c99899
+394	8480	8147147027364439	CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj	3537a39da2234276
+454	8641	8147147027976739	CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj	630efd6540403d8b
+385	8869	8147147027259711	CMakeFiles/AIOffice.dir/main.cpp.obj	1fd4b4ac829436d0
+420	9375	8147147027615238	CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj	9bf2676f9a1a8926
+402	9404	8147147027400916	CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj	5dae440a94772b3a
+410	9420	8147147027530926	CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj	ac764968d7e69888
+443	10250	8147147027863414	CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj	725e456d69a05fdc
+465	10390	8147147028087806	CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj	eebdc1d5a5d4bc9d
+10390	10892	8147147127315246	AIOffice.exe	68ab0689d60f4c8d

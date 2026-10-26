@@ -4,7 +4,7 @@ import Status from "./components/status/Status.jsx"
 
 import History from "./components/history/History.jsx"
 
-import Conversation from "./components/conversation/conversation.jsx"
+import Conversation from "./components/conversation/Conversation.jsx"
 
 import UseInput from "./components/hooks/User.jsx"
 

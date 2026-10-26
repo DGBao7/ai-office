@@ -7,8 +7,8 @@
     min-width: 0;
     min-height: 0;
     padding: 24px;
-
     padding-right: 200px;
+    padding-bottom: 120px;
 
     overflow-y: auto;
 
@@ -18,14 +18,31 @@
     font-family: "Nunito", sans-serif;
 }
 
+.chat
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+
+    overflow-y: auto;
+}
+
 .message
 {
     display: flex;
     flex-direction: column;
     gap: 8px;
 
+    width: fit-content;
     max-width: 80%;
+    min-width: 0;
+
     margin-bottom: 24px;
+    box-sizing: border-box;
 }
 
 .message_user
@@ -49,6 +66,10 @@
 
 .message_content
 {
+    box-sizing: border-box;
+
+    max-width: 100%;
+    min-width: 0;
     padding: 14px 18px;
 
     border: 1px solid #303030;
@@ -79,18 +100,21 @@
     border-radius: 14px 14px 14px 4px;
 }
 
-.conversation::-webkit-scrollbar
+.conversation::-webkit-scrollbar,
+.chat::-webkit-scrollbar
 {
     width: 6px;
 }
 
-.conversation::-webkit-scrollbar-thumb
+.conversation::-webkit-scrollbar-thumb,
+.chat::-webkit-scrollbar-thumb
 {
     background: #404040;
     border-radius: 10px;
 }
 
-.conversation::-webkit-scrollbar-thumb:hover
+.conversation::-webkit-scrollbar-thumb:hover,
+.chat::-webkit-scrollbar-thumb:hover
 {
     background: #666666;
 }

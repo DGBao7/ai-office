@@ -1,6 +1,9 @@
 .input_container
 {
     display: flex;
+    flex-shrink: 0;
+    margin-top: auto;
+
     align-items: flex-end;
     gap: 12px;
 

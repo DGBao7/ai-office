@@ -16,8 +16,6 @@ function App()
 
   const [chat , _set_chat] = UseChat()
 
-  console.log(chat)
-
   return (
     <>
       <div className="playground">

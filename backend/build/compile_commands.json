@@ -37,6 +37,12 @@
 },
 {
   "directory": "D:/work/programs/prj/ai-office/backend/build",
+  "command": "D:\\work\\msys2\\mingw64\\bin\\c++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/backend/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\contact\\Memory.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\contact\\Memory.cpp",
+  "file": "D:/work/programs/prj/ai-office/backend/src/contact/Memory.cpp",
+  "output": "D:/work/programs/prj/ai-office/backend/build/CMakeFiles/AIOffice.dir/src/contact/Memory.cpp.obj"
+},
+{
+  "directory": "D:/work/programs/prj/ai-office/backend/build",
   "command": "D:\\work\\msys2\\mingw64\\bin\\c++.exe -DENV_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/.env\\\" -DMINGW_HAS_SECURE_API=1 -DMODELS_FILE_PATH=\\\"D:/work/programs/prj/ai-office/backend/configs/models.json\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 -ID:/work/programs/prj/ai-office/backend/build/AIOffice_autogen/include -ID:/work/programs/prj/ai-office/backend/include -ID:/work/programs/prj/ai-office/backend -isystem D:/work/msys2/mingw64/include/qt6/QtWidgets -isystem D:/work/msys2/mingw64/include/qt6 -isystem D:/work/msys2/mingw64/include/qt6/QtCore -isystem D:/work/msys2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/work/msys2/mingw64/include/qt6/QtGui -std=gnu++20 -o CMakeFiles\\AIOffice.dir\\src\\prompt\\Prompt.cpp.obj -c D:\\work\\programs\\prj\\ai-office\\backend\\src\\prompt\\Prompt.cpp",
   "file": "D:/work/programs/prj/ai-office/backend/src/prompt/Prompt.cpp",
   "output": "D:/work/programs/prj/ai-office/backend/build/CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj"

@@ -27,53 +27,14 @@ namespace server
         return false;
     }
 
-    void _start()
+    void _start(ChatHandler chat_handler)
     {
-        utils::Env env;
-
-        if (!env._load())
+        if (!chat_handler)
         {
-            std::cerr << "Cannot load .env\n";
+            std::cerr << "Chat handler is not configured.\n";
 
             return;
         }
-
-        utils::Json model_config(MODELS_FILE_PATH);
-
-        std::vector<std::string> groq_models =
-            model_config._get("groq");
-
-        std::vector<std::string> openrouter_models =
-            model_config._get("openrouter");
-
-        providers::Init initializer;
-
-        initializer._init(
-            env ,
-            "groq" ,
-            model_config
-        );
-
-        initializer._init(
-            env ,
-            "openrouter" ,
-            model_config
-        );
-
-        auto &models = initializer._return_models();
-
-        const std::size_t openrouter_start = groq_models.size();
-
-        const bool groq_available =
-            !env._get("GROQ_API_KEY").empty() &&
-            !groq_models.empty() &&
-            models.size() >= groq_models.size();
-
-        const bool openrouter_available =
-            !env._get("OPENROUTER_API_KEY").empty() &&
-            !openrouter_models.empty() &&
-            models.size() >=
-                groq_models.size() + openrouter_models.size();
 
         if (curl_global_init(CURL_GLOBAL_DEFAULT) != CURLE_OK)
         {
@@ -146,7 +107,7 @@ namespace server
 
         http_server.Post(
             "/api/chat",
-            [&](
+            [&chat_handler](
                 const httplib::Request &request ,
                 httplib::Response &response
             )
@@ -192,54 +153,44 @@ namespace server
                     return;
                 }
 
-                if (!groq_available && !openrouter_available)
+                std::string reply;
+
+                try
                 {
-                    response.status = 503;
+                    reply = chat_handler(message);
+                }
+                catch (const std::exception &error)
+                {
+                    std::cerr
+                        << "[HTTP] Chat handler error: "
+                        << error.what()
+                        << std::endl;
+
+                    response.status = 500;
 
                     response.set_content(
-                        R"({"error":"No AI provider is configured"})",
+                        json({
+                            {"error", "Internal server error"}
+                        }).dump(),
                         "application/json"
                     );
 
                     return;
                 }
-
-                std::string reply;
-                std::string provider_name;
-                std::string model_name;
-
-                if (groq_available)
+                catch (...)
                 {
-                    provider_name = "groq";
-                    model_name = models[0]->_return_model();
+                    std::cerr
+                        << "[HTTP] Unknown chat handler error."
+                        << std::endl;
 
-                    reply = models[0]->_ask(json(message));
-                }
+                    response.status = 500;
 
-                if (
-                    _is_error(reply) &&
-                    openrouter_available
-                )
-                {
-                    provider_name = "openrouter";
-
-                    model_name =
-                        models[openrouter_start]->_return_model();
-
-                    reply = models[openrouter_start]->_ask(
-                        json(message)
+                    response.set_content(
+                        R"({"error":"Internal server error"})",
+                        "application/json"
                     );
-                }
-                else if (!groq_available && openrouter_available)
-                {
-                    provider_name = "openrouter";
 
-                    model_name =
-                        models[openrouter_start]->_return_model();
-
-                    reply = models[openrouter_start]->_ask(
-                        json(message)
-                    );
+                    return;
                 }
 
                 if (_is_error(reply))
@@ -248,9 +199,9 @@ namespace server
 
                     response.set_content(
                         json({
-                            {"error" , reply},
-                            {"provider" , provider_name},
-                            {"model" , model_name}
+                            {"error", reply},
+                            {"provider", "multi-agent"},
+                            {"model", "AIOffice"}
                         }).dump(),
                         "application/json"
                     );
@@ -260,9 +211,9 @@ namespace server
 
                 response.set_content(
                     json({
-                        {"reply" , reply},
-                        {"provider" , provider_name},
-                        {"model" , model_name}
+                        {"reply", reply},
+                        {"provider", "multi-agent"},
+                        {"model", "AIOffice"}
                     }).dump(),
                     "application/json"
                 );
@@ -270,11 +221,14 @@ namespace server
         );
 
         std::cout
-            << "HTTP server running at http://127.0.0.1:8080\n";
+            << "HTTP server running at http://127.0.0.1:8080"
+            << std::endl;
 
         if (!http_server.listen("127.0.0.1" , 8080))
         {
-            std::cerr << "Failed to start HTTP server.\n";
+            std::cerr
+                << "Failed to start HTTP server."
+                << std::endl;
         }
 
         curl_global_cleanup();

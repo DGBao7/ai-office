@@ -8,6 +8,7 @@ set(OLD_GLOB
   "D:/work/programs/prj/ai-office/backend/src/HR/QaEngineer.cpp"
   "D:/work/programs/prj/ai-office/backend/src/HR/SoftwareArchitect.cpp"
   "D:/work/programs/prj/ai-office/backend/src/HR/SoftwareEngineer.cpp"
+  "D:/work/programs/prj/ai-office/backend/src/contact/Memory.cpp"
   "D:/work/programs/prj/ai-office/backend/src/prompt/Prompt.cpp"
   "D:/work/programs/prj/ai-office/backend/src/providers/GroqProvider.cpp"
   "D:/work/programs/prj/ai-office/backend/src/providers/Initializer.cpp"

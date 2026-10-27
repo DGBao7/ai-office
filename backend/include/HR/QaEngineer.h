@@ -25,12 +25,14 @@ namespace hr
 
         std::string _run(
             nlohmann::json prompt ,
-            std::string input
+            std::string input ,
+            std::vector<std::string> &memory
         ) override;
 
         std::string _backup(
             nlohmann::json prompt ,
-            std::string input
+            std::string input ,
+            std::vector<std::string> &memory
         ) override;
     };
 }

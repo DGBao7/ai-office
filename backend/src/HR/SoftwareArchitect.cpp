@@ -14,7 +14,8 @@ namespace hr
 
     std::string SoftwareArchitect::_backup(
         nlohmann::json prompt ,
-        std::string input
+        std::string input ,
+        std::vector<std::string> &memory
     )
     {
         nlohmann::json request = prompt;
@@ -24,20 +25,20 @@ namespace hr
 
         std::string output = this -> employee -> _ask(question);
 
-        std::cout << "[employee output] [" << output << "]\n";
-
         return output;
     }
 
     std::string SoftwareArchitect::_run(
         nlohmann::json prompt ,
-        std::string input
+        std::string input , 
+        std::vector<std::string> &memory
     )
     {
         std::string manager_error;
 
         nlohmann::json request = prompt;
         request["user_request"] = input;
+        request["memory"] = memory;
 
         if (prompt.empty())
         {
@@ -70,6 +71,6 @@ std::cout << "hr/architect manager error\n";
 std::cout << manager_error << "\n";
 std::cout << "switch to employee\n";
 
-        return this -> _backup(prompt , input);
+        return this -> _backup(prompt , input , memory);
     }
 }

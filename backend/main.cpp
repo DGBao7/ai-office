@@ -15,11 +15,14 @@
 
 #include "server/HttpServer.h"
 
+#include "contact/Memory.h"
+
 #include <string>
 #include <iostream>
 #include <windows.h>
 #include <vector>
 #include <memory>
+#include <mutex>
 
 // env
 utils::Env *_run_env()
@@ -55,52 +58,84 @@ int main()
     std::vector<std::unique_ptr<providers::Provider>> agents =
         _recruit();
 
-    hr::SoftwareEngineer *software_engineer = new hr::SoftwareEngineer(
-        "software engineer" ,
-        agents
-    );
+    hr::SoftwareEngineer *software_engineer =
+        new hr::SoftwareEngineer(
+            "software engineer" ,
+            agents
+        );
 
-    hr::SoftwareArchitect *software_architect = new hr::SoftwareArchitect(
-        "software architect" ,
-        agents
-    );
+    hr::SoftwareArchitect *software_architect =
+        new hr::SoftwareArchitect(
+            "software architect" ,
+            agents
+        );
 
-    hr::QaEngineer *qa_engineer = new hr::QaEngineer(
-        "qa engineer" ,
-        agents
-    );
+    hr::QaEngineer *qa_engineer =
+        new hr::QaEngineer(
+            "qa engineer" ,
+            agents
+        );
 
     prompt::Prompt *prompt = new prompt::Prompt();
 
-    server::_start();
+    contact::Memory *memory = new contact::Memory();
 
-    while (true)
+    std::mutex chat_mutex;
+
+    server::ChatHandler chat_handler =
+        [&] (const std::string &input) -> std::string
     {
-        std::string input;
-        std::cout << "Enter: ";
-        std::getline(std::cin , input);
+        std::lock_guard<std::mutex> lock(chat_mutex);
 
-        if (input == "")
-        {
-            break;
-        }
+        memory -> _save_contact(input , "user");
 
         prompt -> _get_user_input(input);
 
-        nlohmann::json agent_prompt = prompt -> _return_prompt("software architect");
-        std::string architect_response = software_architect -> _run(agent_prompt , input);
+        std::vector<std::string> memory_flow =
+            memory -> _return_flow();
 
-        agent_prompt = prompt -> _return_prompt("software engineer");
-        std::string engineer_response = software_engineer -> _run(agent_prompt , architect_response);
+        nlohmann::json agent_prompt =
+            prompt -> _return_prompt("software architect");
 
-        agent_prompt = prompt -> _return_prompt("qa engineer");
-        std::string qa_response = qa_engineer -> _run(agent_prompt , engineer_response);
+        std::string architect_response =
+            software_architect -> _run(
+                agent_prompt ,
+                input ,
+                memory_flow
+            );
 
-        std::cout << qa_response << "\n";
+        agent_prompt =
+            prompt -> _return_prompt("software engineer");
 
-        std::cout << "\n";
-    }
+        std::string engineer_response =
+            software_engineer -> _run(
+                agent_prompt ,
+                architect_response ,
+                memory_flow
+            );
 
-    std::string one;
-    std::getline(std::cin , one);
+        agent_prompt =
+            prompt -> _return_prompt("qa engineer");
+
+        std::string qa_response =
+            qa_engineer -> _run(
+                agent_prompt ,
+                engineer_response ,
+                memory_flow
+            );
+
+        memory -> _save_contact(qa_response , "assistant");
+
+        return qa_response;
+    };
+
+    server::_start(chat_handler);
+
+    delete memory;
+    delete prompt;
+    delete qa_engineer;
+    delete software_architect;
+    delete software_engineer;
+
+    return 0;
 }

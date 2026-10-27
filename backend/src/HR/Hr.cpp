@@ -12,7 +12,8 @@ namespace hr
 
     std::string Divisions::_run( 
         nlohmann::json prompt ,
-        std::string input
+        std::string input ,
+        std::vector<std::string> &memory
     )
     {
         return "";
@@ -20,7 +21,8 @@ namespace hr
 
     std::string Divisions::_backup(
         nlohmann::json prompt ,
-        std::string input
+        std::string input ,
+        std::vector<std::string> &memory
     )
     {
         return "";

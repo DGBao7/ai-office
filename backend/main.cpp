@@ -82,8 +82,7 @@ int main()
 
     std::mutex chat_mutex;
 
-    server::ChatHandler chat_handler =
-        [&] (const std::string &input) -> std::string
+    server::ChatHandler chat_handler = [&] (const std::string &input) -> std::string
     {
         std::lock_guard<std::mutex> lock(chat_mutex);
 
@@ -91,11 +90,9 @@ int main()
 
         prompt -> _get_user_input(input);
 
-        std::vector<std::string> memory_flow =
-            memory -> _return_flow();
+        std::vector<std::string> memory_flow = memory -> _return_flow();
 
-        nlohmann::json agent_prompt =
-            prompt -> _return_prompt("software architect");
+        nlohmann::json agent_prompt = prompt -> _return_prompt("software architect");
 
         std::string architect_response =
             software_architect -> _run(
@@ -104,8 +101,7 @@ int main()
                 memory_flow
             );
 
-        agent_prompt =
-            prompt -> _return_prompt("software engineer");
+        agent_prompt = prompt -> _return_prompt("software engineer");
 
         std::string engineer_response =
             software_engineer -> _run(
@@ -114,8 +110,7 @@ int main()
                 memory_flow
             );
 
-        agent_prompt =
-            prompt -> _return_prompt("qa engineer");
+        agent_prompt = prompt -> _return_prompt("qa engineer");
 
         std::string qa_response =
             qa_engineer -> _run(
@@ -136,6 +131,4 @@ int main()
     delete qa_engineer;
     delete software_architect;
     delete software_engineer;
-
-    return 0;
 }

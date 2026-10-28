@@ -69,7 +69,7 @@ namespace hr
             manager_error = "hr/architect manager error\n";
         }
 
-std::cout << "hr/architect manager error\n";
+std::cout << "hr/qa manager error\n";
 std::cout << manager_error << "\n";
 std::cout << "switch to employee\n";
 

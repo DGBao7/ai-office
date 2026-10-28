@@ -2,6 +2,8 @@ import "./Conversation.css";
 
 import Input from "./input/Input";
 
+import MessageContent from "./content/MessageContent";
+
 function Chat(
     {
         chat
@@ -16,7 +18,9 @@ function Chat(
                     className={`message message_${message.role === "user" ? "user" : "ai"}`}
                 >
                     <div className="message_content">
-                        {message.content}
+                        <MessageContent 
+                            content={message.content} 
+                        />
                     </div>
                 </div>
             ))}

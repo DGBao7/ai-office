@@ -382,11 +382,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "AIOffice_autogen::@6890427a1f51a3e7e1df"
+			"id" : "AIOffice_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "AIOffice_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "AIOffice_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "AIOffice::@6890427a1f51a3e7e1df",
@@ -491,11 +491,11 @@
 			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "AIOffice_autogen::@6890427a1f51a3e7e1df"
+			"id" : "AIOffice_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "AIOffice_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "AIOffice_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"paths" : 

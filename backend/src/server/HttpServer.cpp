@@ -56,14 +56,26 @@ namespace server
                     const std::string origin =
                         request.get_header_value("Origin");
 
+                    const char *frontend_url =
+                        std::getenv("FRONTEND_URL");
+
                     if (
                         origin == "http://localhost:5173" ||
-                        origin == "http://127.0.0.1:5173"
+                        origin == "http://127.0.0.1:5173" ||
+                        (
+                            frontend_url != nullptr &&
+                            origin == frontend_url
+                        )
                     )
                     {
                         response.set_header(
                             "Access-Control-Allow-Origin",
                             origin
+                        );
+
+                        response.set_header(
+                            "Vary",
+                            "Origin"
                         );
                     }
                 }
@@ -220,17 +232,35 @@ namespace server
             }
         );
 
+        const char *port_env = std::getenv("PORT");
+
+        int port = 8080;
+
+        if (port_env != nullptr)
+        {
+            try
+            {
+                port = std::stoi(port_env);
+            }
+            catch (...)
+            {
+                std::cerr << "Invalid PORT environment variable."
+                        << std::endl;
+
+                return;
+            }
+        }
+
         std::cout
-            << "HTTP server running at http://127.0.0.1:8080"
+            << "HTTP server running on port "
+            << port
             << std::endl;
 
-        if (!http_server.listen("127.0.0.1" , 8080))
+        if (!http_server.listen("0.0.0.0" , port))
         {
             std::cerr
                 << "Failed to start HTTP server."
                 << std::endl;
         }
-
-        curl_global_cleanup();
     }
 }

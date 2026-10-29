@@ -1,0 +1,249 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::OpenSSL_Crypto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__OpenSSL_Crypto-Debug-70858ca0ee8571cc023b.json",
+					"name" : "CURL::OpenSSL_Crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__ZLIB-Debug-04ff45642c03a7cc803f.json",
+					"name" : "CURL::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::brotli::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__brotli-Debug-f86c872c8e30701ce164.json",
+					"name" : "CURL::brotli",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::curl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__curl-Debug-5f1969bfb871fdbb6b5c.json",
+					"name" : "CURL::curl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::libcurl_shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__libcurl_shared-Debug-9de2363f85d289aaf95c.json",
+					"name" : "CURL::libcurl_shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::libidn2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__libidn2-Debug-49378c1e6bfaf2c67c1f.json",
+					"name" : "CURL::libidn2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::libpsl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__libpsl-Debug-7d0a70998418bc722e7d.json",
+					"name" : "CURL::libpsl",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::libssh2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__libssh2-Debug-871dfa436cc913e559bf.json",
+					"name" : "CURL::libssh2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::nghttp2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__nghttp2-Debug-47c540d9fd9e68e2e2bf.json",
+					"name" : "CURL::nghttp2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::nghttp3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__nghttp3-Debug-14c7c1404fadade34734.json",
+					"name" : "CURL::nghttp3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::ngtcp2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__ngtcp2-Debug-a6c07748fdb4c4cf1351.json",
+					"name" : "CURL::ngtcp2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::win32_winsock::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__win32_winsock-Debug-b3cce6efdbb7cebf5b89.json",
+					"name" : "CURL::win32_winsock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::zstd::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__zstd-Debug-2b25e2e808b506a22791.json",
+					"name" : "CURL::zstd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::Crypto::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__Crypto-Debug-c3b4c0ab683bb942e6a2.json",
+					"name" : "OpenSSL::Crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::SSL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__SSL-Debug-c0040b4dcd55080dd8af.json",
+					"name" : "OpenSSL::SSL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OpenSSL::applink::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OpenSSL__applink-Debug-d1afb2d36c62df8c5039.json",
+					"name" : "OpenSSL::applink",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-Debug-a0c9d6e3ae350516a54b.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZLIB::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZLIB__ZLIB-Debug-2e0fb71fbbb66a1faab6.json",
+					"name" : "ZLIB::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nlohmann_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nlohmann_json-Debug-cd7d771a0a6df8dd7fbd.json",
+					"name" : "nlohmann_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nlohmann_json::nlohmann_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nlohmann_json__nlohmann_json-Debug-67e38237d5a432abe601.json",
+					"name" : "nlohmann_json::nlohmann_json",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AIOffice",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AIOffice::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AIOffice-Debug-79496c304dbd040ca62e.json",
+					"name" : "AIOffice",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/work/programs/prj/ai-office/build",
+		"source" : "D:/work/programs/prj/ai-office/backend"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

@@ -17,6 +17,7 @@
 #include <string>
 #include <mutex>
 #include <functional>
+#include <cstdlib>
 
 namespace server
 {

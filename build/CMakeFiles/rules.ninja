@@ -87,14 +87,6 @@ rule VERIFY_GLOBS
 
 
 #############################################
-# Rule for cleaning additional files.
-
-rule CLEAN_ADDITIONAL
-  command = D:\work\msys2\mingw64\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
-  description = Cleaning additional files...
-
-
-#############################################
 # Rule for cleaning all built files.
 
 rule CLEAN

@@ -10,7 +10,6 @@ set(CMAKE_AUTOMOC ON)
 
 find_package(CURL REQUIRED)
 find_package(nlohmann_json REQUIRED)
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Threads REQUIRED)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
@@ -48,7 +47,6 @@ target_include_directories(AIOffice PRIVATE
 target_link_libraries(AIOffice PRIVATE
     CURL::libcurl
     nlohmann_json::nlohmann_json
-    Qt6::Widgets
 )
 
 target_link_libraries(AIOffice PRIVATE
@@ -56,6 +54,11 @@ target_link_libraries(AIOffice PRIVATE
 )
 
 if(WIN32)
+    target_compile_definitions(AIOffice PRIVATE
+        _WIN32_WINNT=0x0A00
+        WINVER=0x0A00
+    )
+
     target_link_libraries(AIOffice PRIVATE
         ws2_32
     )

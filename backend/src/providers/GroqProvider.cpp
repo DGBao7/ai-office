@@ -105,7 +105,21 @@ namespace providers
 
         try
         {
-            json data = json::parse(response);
+            if (response.empty())
+            {
+                return "Error: Empty API response.";
+            }
+
+            json data = json::parse(
+                response ,
+                nullptr ,
+                false
+            );
+
+            if (data.is_discarded())
+            {
+                return "Error: Invalid JSON response.";
+            }
 
             if (status_code < 200 || status_code >= 300)
             {

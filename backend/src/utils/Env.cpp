@@ -6,43 +6,101 @@
 
 namespace utils
 {
+    // bool Env::_load(const std::string path)
+    // {
+    //     std::ifstream file (
+    //         path == ".env" ? ENV_FILE_PATH : path
+    //     );
+
+    //     if (!file.is_open())
+    //     {
+    //         return false;
+    //     }
+
+    //     std::string line;
+
+    //     while (std::getline(file , line))
+    //     {
+    //         if (line.empty() || line[0] == '#')
+    //         {
+    //             continue;
+    //         }
+
+    //         std::size_t confirm = line.find('=');
+
+    //         if (confirm == std::string::npos)
+    //         {
+    //             continue;
+    //         }
+
+    //         std::string key = line.substr(0 , confirm);
+    //         std::string value = line.substr(confirm + 1);
+
+    //         if (!key.empty())
+    //         {
+    //             this -> env[key] = value;
+    //         }
+    //     }
+
+    //     return true;
+    // }
+    
     bool Env::_load(const std::string path)
     {
-        std::ifstream file (
+        bool loaded = false;
+
+        std::ifstream file(
             path == ".env" ? ENV_FILE_PATH : path
         );
 
-        if (!file.is_open())
+        if (file.is_open())
         {
-            return false;
+            std::string line;
+
+            while (std::getline(file , line))
+            {
+                if (line.empty() || line[0] == '#')
+                {
+                    continue;
+                }
+
+                std::size_t confirm = line.find('=');
+
+                if (confirm == std::string::npos)
+                {
+                    continue;
+                }
+
+                std::string key = line.substr(0 , confirm);
+                std::string value = line.substr(confirm + 1);
+
+                if (!key.empty())
+                {
+                    this -> env[key] = value;
+                }
+            }
+
+            loaded = true;
         }
 
-        std::string line;
+        const std::vector<std::string> api_keys = {
+            "GROQ_API_KEY",
+            "OPENROUTER_API_KEY",
+        };
 
-        while (std::getline(file , line))
+        for (const std::string &key : api_keys)
         {
-            if (line.empty() || line[0] == '#')
-            {
-                continue;
-            }
+            const char *value = std::getenv(key.c_str());
 
-            std::size_t confirm = line.find('=');
-
-            if (confirm == std::string::npos)
-            {
-                continue;
-            }
-
-            std::string key = line.substr(0 , confirm);
-            std::string value = line.substr(confirm + 1);
-
-            if (!key.empty())
+            if (value != nullptr && value[0] != '\0')
             {
                 this -> env[key] = value;
+
+                loaded = true;
             }
         }
 
-        return true;
+        return loaded;
     }
 
     std::string Env::_get(const std::string key)

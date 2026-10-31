@@ -1,4 +1,4 @@
-# Install script for directory: D:/work/programs/prj/ai-office/backend
+# Install script for directory: D:/works/prjs/pro/ai-office/backend
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/work/msys2/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/works/tools/msys2/mingw64/bin/objdump.exe")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/work/programs/prj/ai-office/backend/build/install_local_manifest.txt"
+  file(WRITE "D:/works/prjs/pro/ai-office/backend/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/work/programs/prj/ai-office/backend/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/works/prjs/pro/ai-office/backend/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -2,6 +2,8 @@ import { useRef } from "react";
 
 import "./Input.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function InputContainer(
     {
         user_input , _set_user_input ,
@@ -53,7 +55,7 @@ function InputContainer(
         try
         {
             const response = await fetch(
-                "http://127.0.0.1:8080/api/chat",
+                `${API_URL}/api/chat`,
                 {
                     method: "POST",
 

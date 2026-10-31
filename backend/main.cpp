@@ -39,7 +39,7 @@ std::vector<std::unique_ptr<providers::Provider>> _recruit()
 {
     utils::Env *env = _run_env();
 
-    utils::Json *models = new utils::Json("../configs/models.json");
+    utils::Json *models = new utils::Json(MODELS_FILE_PATH);
 
     providers::Init init;
     init._init(*env , "groq" , *models);

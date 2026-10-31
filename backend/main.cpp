@@ -19,10 +19,13 @@
 
 #include <string>
 #include <iostream>
-#include <windows.h>
 #include <vector>
 #include <memory>
 #include <mutex>
+
+#ifdef _WIN32
+    #include <windows.h>
+#endif
 
 // env
 utils::Env *_run_env()

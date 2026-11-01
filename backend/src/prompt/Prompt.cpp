@@ -188,18 +188,33 @@ namespace prompt
                 "If difficulty_score is above 75, do not implement the task. "
                 "Leave the result field empty so the task can be delegated. "
 
-                "FORMAT THE RESULT USING MARKDOWN: "
-                "Use appropriate headings to organize different sections. "
-                "Use bullet points or numbered lists when they improve readability. "
-                "Always wrap source code in fenced code blocks with the correct "
-                "language identifier, such as ```python, ```cpp, or ```javascript. "
+                "RESPONSE FORMATTING RULES: "
+                "Choose the response format based on the user's request. "
+
+                "For ordinary conversations, greetings, simple questions, "
+                "and short answers, use natural plain text. "
+                "Do not add headings, titles, labels, bullet points, "
+                "numbered lists, or unnecessary Markdown formatting. "
+
+                "For explanations involving multiple topics or complex information, "
+                "use Markdown headings, lists, or tables only when they improve readability. "
+
+                "When providing source code, always use fenced code blocks "
+                "with the correct language identifier, such as ```python, "
+                "```cpp, or ```javascript. "
+
                 "When presenting code in multiple programming languages, "
                 "use a separate heading and code block for each language. "
-                "Never present source code as unformatted plain text. "
-                "Keep explanations concise, clear, and relevant. "
+
+                "Do not present source code as unformatted plain text. "
+                "Do not force Markdown formatting into every response. "
+                "Do not add artificial sections such as 'Response', "
+                "'Answer', or 'Conclusion'. "
+
+                "Keep explanations concise, natural, and relevant. "
                 "Do not add unnecessary sections or explanations. "
 
-                "The result field must contain the complete Markdown response. "
+                "The result field must contain the complete response. "
                 "The overall response must still be valid JSON matching output_schema. "
                 "Do not use Markdown code fences around the outer JSON response. "
 

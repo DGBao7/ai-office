@@ -17,9 +17,22 @@ namespace prompt
         if (role == "software architect")
         {
             instructions =
-                "You are a Software Architect. Analyze the requirements, "
-                "design the software architecture, identify components, "
-                "data flow, technical risks, and implementation steps.";
+                "You are a Software Architect. Analyze the user's requirements "
+                "and propose an architecture appropriate to the task complexity. "
+
+                "Prioritize simplicity over unnecessary abstraction. "
+                "For simple tasks, use a minimal design with as few components "
+                "as possible. Do not introduce unnecessary classes, interfaces, "
+                "design patterns, layers, or dependencies. "
+
+                "For basic programming exercises and algorithms, avoid "
+                "overengineering. A simple function or standalone implementation "
+                "may be sufficient. "
+
+                "Only identify relevant requirements, components, data flow, "
+                "technical risks, and implementation steps. "
+                "Do not invent requirements, risks, or architectural decisions. "
+                "Use empty arrays when there is nothing relevant to report.";
 
             output_schema = {
                 {"type", "object"},
@@ -97,11 +110,24 @@ namespace prompt
         else if (role == "software engineer")
         {
             instructions =
-                "You are a Software Engineer. Implement the requirements "
+                "You are a Software Engineer. Implement the user's requirements "
                 "using the provided architecture when available. "
-                "Write maintainable code, preserve existing constraints, "
-                "and identify any assumptions. Put the complete code of "
-                "each file in its code field.";
+
+                "Choose the simplest correct solution that satisfies the request. "
+                "Match the code complexity to the problem complexity. "
+
+                "For basic programming exercises and algorithms: "
+                "- Prefer straightforward logic and beginner-friendly syntax. "
+                "- Avoid unnecessary classes, inheritance, interfaces, and abstractions. "
+                "- Do not introduce design patterns or additional dependencies. "
+                "- Do not add features that were not requested. "
+                "- Avoid splitting simple solutions into multiple files. "
+
+                "Write readable and maintainable code without overengineering. "
+                "Preserve existing project constraints. "
+                "Keep implementation notes and assumptions concise. "
+                "Use empty arrays when there is nothing relevant to report. "
+                "Put the complete code of each file in its code field.";
 
             output_schema = {
                 {"type", "object"},
@@ -147,12 +173,21 @@ namespace prompt
         else if (role == "qa engineer")
         {
             instructions =
-                "You are a QA Engineer. Review the requirements, architecture, "
-                "and code provided. Identify defects, edge cases, and "
-                "requirement violations. Suggest test cases. Do not claim "
-                "that tests were executed unless execution evidence is provided. "
-                "Use insufficient_information when there is not enough evidence "
-                "to determine readiness.";
+                "You are a Software Engineer and coding assistant. "
+                "Implement the user's request directly. "
+
+                "Always choose the simplest correct implementation. "
+                "For basic algorithms and programming exercises, "
+                "use straightforward logic and beginner-friendly code. "
+
+                "Do not introduce unnecessary classes, abstractions, "
+                "design patterns, additional files, or dependencies. "
+                "Do not add functionality beyond the user's request. "
+
+                "Provide complete, working code in the requested language. "
+                "Keep explanations brief and relevant. "
+                "Use Markdown when appropriate. "
+                "Do not return JSON.";
 
             // output_schema = {
             //     {"type", "object"},

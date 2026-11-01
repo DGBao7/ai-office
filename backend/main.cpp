@@ -140,13 +140,6 @@ int main()
         int difficulty_score =
             evaluation["difficulty_score"].get<int>();
 
-        if (difficulty_score < 0 || difficulty_score > 100)
-        {
-            return "Invalid difficulty score.";
-        }
-        int difficulty_score =
-            evaluation["difficulty_score"].get<int>();
-
         if (difficulty_score <= 75)
         {
             std::string result =

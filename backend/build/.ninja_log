@@ -1,5 +1,5 @@
 # ninja log v7
-19	73	8151776645705299	D:/works/prjs/pro/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b249cc6a16ec7f4
+37	105	8152360863895299	D:/works/prjs/pro/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b249cc6a16ec7f4
 120	2007	8151742891896679	CMakeFiles/AIOffice.dir/src/contact/Memory.cpp.obj	ddcd4918f6f290f8
 159	2726	8151776358364840	CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj	a1840a0911b8b5b2
 2016	3961	8151742910907780	CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj	c3b99df360672441
@@ -7,20 +7,17 @@
 93	5859	8151776357697108	CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj	38b6f6ee3b66e2d0
 183	7464	8151742892526531	CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj	dcd74e2c138e16ab
 127	6248	8151776358048348	CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj	f3003c4110ee7f4c
-128	7689	8151742891982231	CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj	7a9065bfa56e6222
+129	4644	8152360864812862	CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj	7a9065bfa56e6222
 111	7195	8151776357887624	CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj	cd83d73f3b0b72da
 104	7169	8151776357812346	CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj	673483393b125292
-98	7114	8151776357756985	CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj	24a2a27528fabb86
-118	8288	8151776357957815	CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj	ac608e03c18b6e71
-135	8358	8151776358123989	CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj	f462b626ce6ad77d
-85	13309	8151776357631566	CMakeFiles/AIOffice.dir/main.cpp.obj	1f142cbd630c3738
-151	16585	8151776358289395	CMakeFiles/AIOffice.dir/src/server/HttpServer.cpp.obj	f65663865d37d893
-78	1121	8151776646312865	AIOffice.exe	75f08a2952798f35
-37	105	8152360863895299	D:/works/prjs/pro/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b249cc6a16ec7f4
-129	4644	8152360864812862	CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj	7a9065bfa56e6222
-123	5021	8152360864752763	CMakeFiles/AIOffice.dir/src/HR/TaskEvaluator.cpp.obj	16c21ce239fc382d
 117	5038	8152360864692478	CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj	24a2a27528fabb86
-144	5933	8152360864948489	CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj	f462b626ce6ad77d
 137	6081	8152360864888320	CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj	ac608e03c18b6e71
+144	5933	8152360864948489	CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj	f462b626ce6ad77d
 111	11521	8152360864627303	CMakeFiles/AIOffice.dir/main.cpp.obj	1f142cbd630c3738
+151	16585	8151776358289395	CMakeFiles/AIOffice.dir/src/server/HttpServer.cpp.obj	f65663865d37d893
 11521	12730	8152360978735548	AIOffice.exe	891f3ac075fa8201
+123	5021	8152360864752763	CMakeFiles/AIOffice.dir/src/HR/TaskEvaluator.cpp.obj	16c21ce239fc382d
+21	79	8152370088428906	D:/works/prjs/pro/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b249cc6a16ec7f4
+10	68	8152370375412252	D:/works/prjs/pro/ai-office/backend/build/CMakeFiles/cmake.verify_globs	b249cc6a16ec7f4
+73	9975	8152370376048704	CMakeFiles/AIOffice.dir/main.cpp.obj	1f142cbd630c3738
+9975	10797	8152370475074147	AIOffice.exe	891f3ac075fa8201

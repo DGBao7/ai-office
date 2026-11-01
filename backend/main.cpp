@@ -111,15 +111,50 @@ int main()
                 memory_flow
             );
 
-        nlohmann::json evaluation =
-            nlohmann::json::parse(task_evaluator_response);
+        nlohmann::json evaluation;
 
+        try
+        {
+            evaluation = nlohmann::json::parse(task_evaluator_response);
+
+            if (!evaluation.is_object() ||
+                !evaluation.contains("difficulty_score") ||
+                !evaluation["difficulty_score"].is_number_integer() ||
+                !evaluation.contains("result") ||
+                !evaluation["result"].is_string())
+            {
+                return "Task evaluation not json or dont have difficulty score.";
+            }
+        }
+        catch (const std::exception &error)
+        {
+            std::cerr << "TaskEvaluator JSON error: "
+                    << error.what() << "\n";
+
+            std::cerr << "Raw response: "
+                    << task_evaluator_response << "\n";
+
+            return "Unable to evaluate the task.";
+        }
+
+        int difficulty_score =
+            evaluation["difficulty_score"].get<int>();
+
+        if (difficulty_score < 0 || difficulty_score > 100)
+        {
+            return "Invalid difficulty score.";
+        }
         int difficulty_score =
             evaluation["difficulty_score"].get<int>();
 
         if (difficulty_score <= 75)
         {
-            return task_evaluator_response;
+            std::string result =
+            evaluation["result"].get<std::string>();
+
+            memory -> _save_contact(result , "assistant");
+
+            return result;
         }
         else
         {

@@ -8,8 +8,8 @@ namespace hr
     )
         : Divisions(name , agents)
     {
-        this -> manager = this -> agents[0].get();
-        this -> employee = this -> agents[2].get();
+        this -> manager = this -> agents[1].get();
+        this -> employee = this -> agents[4].get();
     }
 
     std::string TaskEvaluator::_backup(

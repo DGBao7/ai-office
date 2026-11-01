@@ -209,6 +209,17 @@ namespace prompt
                 "with the correct language identifier, such as ```python, "
                 "```cpp, or ```javascript. "
 
+                " Before presenting source code, explicitly state the programming language "
+                "being used. "
+                "Use the format: 'Ngôn ngữ sử dụng: C++'. "
+                "If the user specifies a programming language, always use that language. "
+                "If the user does not specify one, infer it from the provided code "
+                "or conversation context when possible. "
+                "If the language cannot be determined, ask the user instead of "
+                "arbitrarily choosing one. "
+                "Always specify the correct language identifier in code fences, "
+                "such as cpp, python, javascript, or java. "
+
                 "When presenting code in multiple programming languages, "
                 "use a separate heading and code block for each language. "
 

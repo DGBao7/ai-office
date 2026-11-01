@@ -10,6 +10,7 @@
 #include "HR/SoftwareArchitect.h"
 #include "HR/SoftwareEngineer.h"
 #include "HR/QaEngineer.h"
+#include "HR/TaskEvaluator.h"
 
 #include "prompt/Prompt.h"
 
@@ -79,6 +80,12 @@ int main()
             agents
         );
 
+    hr::TaskEvaluator *task_evaluator = 
+        new hr::TaskEvaluator(
+            "task evaluator" ,
+            agents
+        );
+
     prompt::Prompt *prompt = new prompt::Prompt();
 
     contact::Memory *memory = new contact::Memory();
@@ -95,36 +102,58 @@ int main()
 
         std::vector<std::string> memory_flow = memory -> _return_flow();
 
-        nlohmann::json agent_prompt = prompt -> _return_prompt("software architect");
+        nlohmann::json agent_prompt = prompt -> _return_prompt("task evaluator");
 
-        std::string architect_response =
-            software_architect -> _run(
+        std::string task_evaluator_response =
+            task_evaluator -> _run(
                 agent_prompt ,
-                input ,
+                input , 
                 memory_flow
             );
 
-        agent_prompt = prompt -> _return_prompt("software engineer");
+        nlohmann::json evaluation =
+            nlohmann::json::parse(task_evaluator_response);
 
-        std::string engineer_response =
-            software_engineer -> _run(
-                agent_prompt ,
-                architect_response ,
-                memory_flow
-            );
+        int difficulty_score =
+            evaluation["difficulty_score"].get<int>();
 
-        agent_prompt = prompt -> _return_prompt("qa engineer");
+        if (difficulty_score <= 75)
+        {
+            return task_evaluator_response;
+        }
+        else
+        {
+            agent_prompt = prompt -> _return_prompt("software architect");
 
-        std::string qa_response =
-            qa_engineer -> _run(
-                agent_prompt ,
-                engineer_response ,
-                memory_flow
-            );
+            std::string architect_response =
+                software_architect -> _run(
+                    agent_prompt ,
+                    input ,
+                    memory_flow
+                );
 
-        memory -> _save_contact(qa_response , "assistant");
+            agent_prompt = prompt -> _return_prompt("software engineer");
 
-        return qa_response;
+            std::string engineer_response =
+                software_engineer -> _run(
+                    agent_prompt ,
+                    architect_response ,
+                    memory_flow
+                );
+
+            agent_prompt = prompt -> _return_prompt("qa engineer");
+
+            std::string qa_response =
+                qa_engineer -> _run(
+                    agent_prompt ,
+                    engineer_response ,
+                    memory_flow
+                );
+
+            memory -> _save_contact(qa_response , "assistant");
+
+            return qa_response;
+        }
     };
 
     server::_start(chat_handler);

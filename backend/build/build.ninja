@@ -89,6 +89,15 @@ build CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj: CXX_COMPILER__AIO
   OBJECT_FILE_DIR = CMakeFiles\AIOffice.dir\src\HR
   TARGET_SUPPORT_DIR = CMakeFiles\AIOffice.dir
 
+build CMakeFiles/AIOffice.dir/src/HR/TaskEvaluator.cpp.obj: CXX_COMPILER__AIOffice_unscanned_ D$:/works/prjs/pro/ai-office/backend/src/HR/TaskEvaluator.cpp || cmake_object_order_depends_target_AIOffice
+  DEFINES = -DENV_FILE_PATH=\"D:/works/prjs/pro/ai-office/backend/.env\" -DMODELS_FILE_PATH=\"D:/works/prjs/pro/ai-office/backend/configs/models.json\" -DWINVER=0x0A00 -D_WIN32_WINNT=0x0A00
+  DEP_FILE = CMakeFiles\AIOffice.dir\src\HR\TaskEvaluator.cpp.obj.d
+  FLAGS = -std=gnu++20
+  INCLUDES = -ID:/works/prjs/pro/ai-office/backend/include -ID:/works/prjs/pro/ai-office/backend
+  OBJECT_DIR = CMakeFiles\AIOffice.dir
+  OBJECT_FILE_DIR = CMakeFiles\AIOffice.dir\src\HR
+  TARGET_SUPPORT_DIR = CMakeFiles\AIOffice.dir
+
 build CMakeFiles/AIOffice.dir/src/contact/Memory.cpp.obj: CXX_COMPILER__AIOffice_unscanned_ D$:/works/prjs/pro/ai-office/backend/src/contact/Memory.cpp || cmake_object_order_depends_target_AIOffice
   DEFINES = -DENV_FILE_PATH=\"D:/works/prjs/pro/ai-office/backend/.env\" -DMODELS_FILE_PATH=\"D:/works/prjs/pro/ai-office/backend/configs/models.json\" -DWINVER=0x0A00 -D_WIN32_WINNT=0x0A00
   DEP_FILE = CMakeFiles\AIOffice.dir\src\contact\Memory.cpp.obj.d
@@ -187,7 +196,7 @@ build CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj: CXX_COMPILER__AIOffice_unsc
 #############################################
 # Link the executable AIOffice.exe
 
-build AIOffice.exe: CXX_EXECUTABLE_LINKER__AIOffice_ CMakeFiles/AIOffice.dir/main.cpp.obj CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/contact/Memory.cpp.obj CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj CMakeFiles/AIOffice.dir/src/server/HttpServer.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj | D$:/works/tools/msys2/mingw64/lib/libcurl.dll.a
+build AIOffice.exe: CXX_EXECUTABLE_LINKER__AIOffice_ CMakeFiles/AIOffice.dir/main.cpp.obj CMakeFiles/AIOffice.dir/src/HR/Hr.cpp.obj CMakeFiles/AIOffice.dir/src/HR/QaEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareArchitect.cpp.obj CMakeFiles/AIOffice.dir/src/HR/SoftwareEngineer.cpp.obj CMakeFiles/AIOffice.dir/src/HR/TaskEvaluator.cpp.obj CMakeFiles/AIOffice.dir/src/contact/Memory.cpp.obj CMakeFiles/AIOffice.dir/src/prompt/Prompt.cpp.obj CMakeFiles/AIOffice.dir/src/providers/GroqProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Initializer.cpp.obj CMakeFiles/AIOffice.dir/src/providers/OpenRouterProvider.cpp.obj CMakeFiles/AIOffice.dir/src/providers/Provider.cpp.obj CMakeFiles/AIOffice.dir/src/server/HttpServer.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Env.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Json.cpp.obj CMakeFiles/AIOffice.dir/src/utils/Str.cpp.obj | D$:/works/tools/msys2/mingw64/lib/libcurl.dll.a
   LINK_LIBRARIES = D:/works/tools/msys2/mingw64/lib/libcurl.dll.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\AIOffice.dir
   POST_BUILD = cd .

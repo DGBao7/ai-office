@@ -17,22 +17,9 @@ namespace prompt
         if (role == "software architect")
         {
             instructions =
-                "You are a Software Architect. Analyze the user's requirements "
-                "and propose an architecture appropriate to the task complexity. "
-
-                "Prioritize simplicity over unnecessary abstraction. "
-                "For simple tasks, use a minimal design with as few components "
-                "as possible. Do not introduce unnecessary classes, interfaces, "
-                "design patterns, layers, or dependencies. "
-
-                "For basic programming exercises and algorithms, avoid "
-                "overengineering. A simple function or standalone implementation "
-                "may be sufficient. "
-
-                "Only identify relevant requirements, components, data flow, "
-                "technical risks, and implementation steps. "
-                "Do not invent requirements, risks, or architectural decisions. "
-                "Use empty arrays when there is nothing relevant to report.";
+                "You are a Software Architect. Analyze the requirements, "
+                "design the software architecture, identify components, "
+                "data flow, technical risks, and implementation steps.";
 
             output_schema = {
                 {"type", "object"},
@@ -110,24 +97,11 @@ namespace prompt
         else if (role == "software engineer")
         {
             instructions =
-                "You are a Software Engineer. Implement the user's requirements "
+                "You are a Software Engineer. Implement the requirements "
                 "using the provided architecture when available. "
-
-                "Choose the simplest correct solution that satisfies the request. "
-                "Match the code complexity to the problem complexity. "
-
-                "For basic programming exercises and algorithms: "
-                "- Prefer straightforward logic and beginner-friendly syntax. "
-                "- Avoid unnecessary classes, inheritance, interfaces, and abstractions. "
-                "- Do not introduce design patterns or additional dependencies. "
-                "- Do not add features that were not requested. "
-                "- Avoid splitting simple solutions into multiple files. "
-
-                "Write readable and maintainable code without overengineering. "
-                "Preserve existing project constraints. "
-                "Keep implementation notes and assumptions concise. "
-                "Use empty arrays when there is nothing relevant to report. "
-                "Put the complete code of each file in its code field.";
+                "Write maintainable code, preserve existing constraints, "
+                "and identify any assumptions. Put the complete code of "
+                "each file in its code field.";
 
             output_schema = {
                 {"type", "object"},
@@ -175,117 +149,6 @@ namespace prompt
             instructions =
                 "You are a Software Engineer and coding assistant. "
                 "Implement the user's request directly. "
-
-                "Always choose the simplest correct implementation. "
-                "For basic algorithms and programming exercises, "
-                "use straightforward logic and beginner-friendly code. "
-
-                "Do not introduce unnecessary classes, abstractions, "
-                "design patterns, additional files, or dependencies. "
-                "Do not add functionality beyond the user's request. "
-
-                "Provide complete, working code in the requested language. "
-                "Keep explanations brief and relevant. "
-                "Use Markdown when appropriate. "
-                "Do not return JSON.";
-
-            // output_schema = {
-            //     {"type", "object"},
-            //     {"additionalProperties", false},
-            //     {"properties", {
-            //         {"verdict", {
-            //             {"type", "string"},
-            //             {"enum", {
-            //                 "ready",
-            //                 "needs_changes",
-            //                 "insufficient_information"
-            //             }}
-            //         }},
-            //         {"summary", {
-            //             {"type", "string"}
-            //         }},
-            //         {"findings", {
-            //             {"type", "array"},
-            //             {"items", {
-            //                 {"type", "object"},
-            //                 {"additionalProperties", false},
-            //                 {"properties", {
-            //                     {"severity", {
-            //                         {"type", "string"},
-            //                         {"enum", {
-            //                             "critical",
-            //                             "high",
-            //                             "medium",
-            //                             "low"
-            //                         }}
-            //                     }},
-            //                     {"location", {{"type", "string"}}},
-            //                     {"issue", {{"type", "string"}}},
-            //                     {"recommendation", {{"type", "string"}}}
-            //                 }},
-            //                 {"required", {
-            //                     "severity",
-            //                     "location",
-            //                     "issue",
-            //                     "recommendation"
-            //                 }}
-            //             }}
-            //         }},
-            //         {"test_cases", {
-            //             {"type", "array"},
-            //             {"items", {
-            //                 {"type", "object"},
-            //                 {"additionalProperties", false},
-            //                 {"properties", {
-            //                     {"name", {{"type", "string"}}},
-            //                     {"steps", {
-            //                         {"type", "array"},
-            //                         {"items", {{"type", "string"}}}
-            //                     }},
-            //                     {"expected_result", {{"type", "string"}}},
-            //                     {"execution_status", {
-            //                         {"type", "string"},
-            //                         {"enum", {
-            //                             "not_run",
-            //                             "passed",
-            //                             "failed"
-            //                         }}
-            //                     }}
-            //                 }},
-            //                 {"required", {
-            //                     "name",
-            //                     "steps",
-            //                     "expected_result",
-            //                     "execution_status"
-            //                 }}
-            //             }}
-            //         }}
-            //     }},
-            //     {"required", {
-            //         "verdict",
-            //         "summary",
-            //         "findings",
-            //         "test_cases"
-            //     }}
-            // };
-        }
-        else
-        {
-            return {
-                {"error", "Unknown role"},
-                {"supported_roles", {
-                    "software_architect",
-                    "software_engineer",
-                    "qa_engineer"
-                }}
-            };
-        }
-
-        if (role == "qa engineer")
-        {
-            instructions =
-                "You are a Software Engineer and coding assistant. "
-                "Implement the user's request directly. "
                 "When asked to write code, provide complete, working code "
                 "in the requested programming language. "
                 "Do not review code unless explicitly requested. "
@@ -298,15 +161,66 @@ namespace prompt
                 {"user_request", this -> input}
             };
         }
+        else if (role == "task evaluator")
+        {
+            instructions =
+                "You are a Task Evaluator and Software Engineer. "
+                "Your responsibility is to evaluate the complexity of the user's request "
+                "and decide whether to handle it directly or delegate it. "
 
-        return {
-            {"role", role},
-            {"instructions",
-                instructions +
-                " Return only valid JSON matching output_schema. "
-                "Do not use Markdown code fences or add text outside the JSON."},
-            {"user_request", this -> input},
-            {"output_schema", output_schema}
-        };
+                "Evaluate task difficulty on a scale from 0 to 100. "
+                "Consider the number of components, logical complexity, "
+                "dependencies, integrations, and architectural requirements. "
+
+                "Use the following guidelines: "
+                "0-25: Very simple tasks. "
+                "26-50: Basic tasks with multiple steps. "
+                "51-75: Moderate tasks with some complexity. "
+                "76-100: Complex tasks requiring architectural planning or multiple components. "
+
+                "If difficulty_score is 75 or below, implement the request directly. "
+                "Choose the simplest correct solution. "
+                "Avoid unnecessary abstractions, classes, design patterns, "
+                "dependencies, and additional features. "
+
+                "If difficulty_score is above 75, do not implement the task. "
+                "Leave the result field empty so the task can be delegated. "
+
+                "Keep the assessment concise. "
+                "Return only valid JSON matching output_schema.";
+
+            output_schema = {
+                {"type", "object"},
+                {"additionalProperties", false},
+                {"properties", {
+                    {"difficulty_score", {
+                        {"type", "integer"},
+                        {"minimum", 0},
+                        {"maximum", 100}
+                    }},
+                    {"assessment", {
+                        {"type", "string"}
+                    }},
+                    {"result", {
+                        {"type", "string"}
+                    }}
+                }},
+                {"required", {
+                    "difficulty_score",
+                    "assessment",
+                    "result"
+                }}
+            };
+        }
+        
+        // return {
+        //     {"role", role},
+        //     {"instructions",
+        //         instructions +
+        //         " Return only valid JSON matching output_schema. "
+        //         "Do not use Markdown code fences or add text outside the JSON."},
+        //     {"user_request", this -> input},
+        //     {"output_schema", output_schema}
+        // };
     }
 }

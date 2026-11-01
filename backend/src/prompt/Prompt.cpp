@@ -186,7 +186,13 @@ namespace prompt
                 "Do not overcomplicate simple programming tasks. "
 
                 "If difficulty_score is above 75, do not implement the task. "
-                "Leave the result field empty so the task can be delegated. "
+                "Leave the result field empty so the task can be delegated."
+                
+                " The difficulty_score must always be a JSON integer. "
+                " Never write numbers as words. "
+                " For example, use 30 instead of thirty. "
+                " The response must be valid JSON and must follow output_schema exactly. "
+                " Never include source code or explanations outside the result field. "
 
                 "RESPONSE FORMATTING RULES: "
                 "Choose the response format based on the user's request. "

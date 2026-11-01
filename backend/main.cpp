@@ -149,6 +149,7 @@ std::cerr << "[CHAT] Response length: "
             evaluation["difficulty_score"].get<int>();
 
 std::cerr << "[CHAT] JSON parsed successfully\n";
+std::cerr << "[INPUT] " + input;
 std::cerr << "[CHAT] Difficulty: "
 << difficulty_score << "\n";
 

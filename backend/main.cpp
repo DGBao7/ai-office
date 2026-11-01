@@ -102,14 +102,22 @@ int main()
 
         std::vector<std::string> memory_flow = memory -> _return_flow();
 
+std::cerr << "[CHAT] Request received\n";
+
         nlohmann::json agent_prompt = prompt -> _return_prompt("task evaluator");
+
+std::cerr << "[CHAT] Calling TaskEvaluator\n";
 
         std::string task_evaluator_response =
             task_evaluator -> _run(
                 agent_prompt ,
                 input , 
                 memory_flow
-            );
+            );  
+
+std::cerr << "[CHAT] TaskEvaluator finished\n";
+std::cerr << "[CHAT] Response length: "
+<< task_evaluator_response.size() << "\n";
 
         nlohmann::json evaluation;
 
@@ -140,10 +148,17 @@ int main()
         int difficulty_score =
             evaluation["difficulty_score"].get<int>();
 
+std::cerr << "[CHAT] JSON parsed successfully\n";
+std::cerr << "[CHAT] Difficulty: "
+<< difficulty_score << "\n";
+
+
         if (difficulty_score <= 75)
         {
+std::cerr << "[CHAT] Simple task\n";
+
             std::string result =
-            evaluation["result"].get<std::string>();
+                evaluation["result"].get<std::string>();
 
             memory -> _save_contact(result , "assistant");
 
@@ -151,6 +166,8 @@ int main()
         }
         else
         {
+std::cerr << "[CHAT] Complex task\n";
+
             agent_prompt = prompt -> _return_prompt("software architect");
 
             std::string architect_response =

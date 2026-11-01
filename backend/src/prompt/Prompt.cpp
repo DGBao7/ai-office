@@ -213,14 +213,14 @@ namespace prompt
             };
         }
         
-        // return {
-        //     {"role", role},
-        //     {"instructions",
-        //         instructions +
-        //         " Return only valid JSON matching output_schema. "
-        //         "Do not use Markdown code fences or add text outside the JSON."},
-        //     {"user_request", this -> input},
-        //     {"output_schema", output_schema}
-        // };
+        return {
+            {"role", role},
+            {"instructions",
+                instructions +
+                " Return only valid JSON matching output_schema. "
+                "Do not use Markdown code fences or add text outside the JSON."},
+            {"user_request", this -> input},
+            {"output_schema", output_schema}
+        };
     }
 }
